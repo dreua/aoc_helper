@@ -1,26 +1,16 @@
 import aoc_helper
-from aoc_helper import (
-    Grid,
-    PrioQueue,
-    decode_text,
-    extract_ints,
-    frange,
-    irange,
-    iter,
-    list,
-    map,
-    range,
-    tail_call,
-)
+from pprint import pprint
 
+o_raw = None
+raw = """X"""
 raw = aoc_helper.fetch({day}, {year})
 
 
-def parse_raw():
+def parse_raw(raw):
     ...
 
 
-data = parse_raw()
+data = parse_raw(raw)
 
 
 def part_one():
@@ -30,6 +20,9 @@ def part_one():
 def part_two():
     ...
 
-
-aoc_helper.lazy_submit(day={day}, year={year}, solution=part_one)
-aoc_helper.lazy_submit(day={day}, year={year}, solution=part_two)
+if not o_raw:
+    aoc_helper.lazy_submit(day={day}, year={year}, solution=part_one)
+    aoc_helper.lazy_submit(day={day}, year={year}, solution=part_two)
+else:
+    pprint(part_one())
+    pprint(part_two())
