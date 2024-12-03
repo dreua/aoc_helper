@@ -1,4 +1,12 @@
 import aoc_helper
+import copy
+import math
+import queue  # reminder to use get_nowait instead of get
+import re
+
+from collections import defaultdict, Counter
+from functools import cache
+from itertools import batched
 from pprint import pprint
 
 o_raw = None
